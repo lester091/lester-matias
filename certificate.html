@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificates | Lester Matias Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        height: 100%;
+        background-color: #fff;
+        color: black;
+      }
+
+      /* Header */
+      .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .logo {
+        color: black;
+        font-size: 24px;
+        font-weight: bold;
+        margin-right: 40px;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-links li {
+        margin-right: 20px;
+      }
+
+      .nav-links li a {
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .nav-links li a:hover {
+        background-color: #FFD700;
+        color: black;
+      }
+
+      /* Certificate Section */
+      .section-certificate {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      .section-heading {
+        font-size: 2.5rem;
+        color: black;
+        margin-bottom: 2rem;
+      }
+
+      .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .gallery-item {
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.05);
+      }
+
+      /* Footer */
+      footer {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: black;
+        text-align: center;
+        padding: 1rem;
+        width: 100%;
+        margin-top: 4rem;
+      }
+
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">Lester Matias</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="certificate.html">Certificate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- Certificate Section -->
+    <section id="certificates" class="section-certificate">
+      <h1 class="section-heading">Certificates</h1>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="cet1.jpg" alt="Certificate 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="cet2.jpg" alt="Certificate 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="cet3.jpg" alt="Certificate 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="cet4.jpg" alt="Certificate 4" />
+        </div>
+        <!-- Add more certificate items as needed -->
+      </div>
+    </section>
+  </body>
+</html>

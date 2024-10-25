@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Lester Matias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-color: #fff;
+            color: black; /* Set all text to black */
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            color: black; /* Set logo text to black */
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 40px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links li a {
+            color: black; /* Set all nav links to black */
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            background-color: #FFD700;
+            color: black; /* Keep hover text black */
+        }
+
+        /* About Section */
+        .section-about {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .section-heading {
+            font-size: 2.5rem;
+            color: black; /* Set section heading to black */
+            margin-bottom: 2rem;
+        }
+
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-img-container {
+            flex-basis: 40%;
+        }
+
+        .about-img-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-details {
+            flex-basis: 50%;
+            text-align: left;
+            color: black; /* Set about details text to black */
+        }
+
+        .details-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .details-box {
+            background-color: rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            color: black; /* Set details box text to black */
+        }
+
+        .details-box:hover {
+            transform: translateY(-10px);
+            background-color: #FFD700;
+            color: black;
+        }
+
+        .details-box img {
+            width: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .details-box h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: black; /* Set details box headings to black */
+        }
+
+        .details-box p {
+            font-size: 1rem;
+            color: black; /* Set details box paragraphs to black */
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: black; /* Set footer text to black */
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .details-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">My Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="certificate.html">Certificate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+        </ul>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section-about">
+        <h1 class="section-heading">About Me</h1>
+        <div class="about-container">
+            <div class="about-img-container">
+                <img src="img1.png" alt="Profile picture" class="about-pic" />
+            </div>
+            <div class="about-details">
+                <p><strong>Personal Profile</strong></p>
+                <p>I am Lester L. Matias, I'm 20 years old and currently studying at PHINMA Araullo University. I am a dedicated Web Developer with expertise in front-end and back-end technologies. I specialize in building responsive, user-friendly websites and applications.</p>
+                <p>With a passion for coding and problem-solving, I continuously explore new technologies to create innovative digital solutions that enhance user experiences and drive results.</p>
+                <p><strong>Mobile:</strong> 0953 243 7342</p>
+                <p><strong>Address:</strong>  Castellano, San Leonardo, Nueva Ecija</p>
+                <p><strong>Lester | Frontend Developer</strong></p>
+                
+                <div class="details-row">
+                    <div class="details-box">
+                        <img src="experience.png" alt="Experience" class="icon" />
+                        <h3>Experience</h3>
+                        <p>2+ years<br />Frontend Development</p>
+                    </div>
+                    <div class="details-box">
+                        <img src="education.png" alt="Education" class="icon" />
+                        <h3>Education</h3>
+                        <p>3rd year college<br />Phinma Araullo University</p>
+                    </div>
+                    <div class="details-box">
+                        <img src="education.png" alt="Specialization" class="icon" />
+                        <h3>Specialization</h3>
+                        <p>Web-Dev<br />Programming</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

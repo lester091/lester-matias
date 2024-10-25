@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lester L. Matias</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-color: #000;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            color: #FFD700;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 40px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links li a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            background-color: #FFD700;
+            color: black;
+        }
+
+        .nav-links li:last-child a {
+            color: #FFD700;
+        }
+
+        .main {
+            background: url('bg2.jpg') no-repeat center center/cover;
+            height: 63vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            text-align: left;
+            color: white;
+            padding: 150px 50px;
+        }
+
+        .title {
+            font-size: 60px;
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #FFD700;
+            border-right: 2px solid #FFD700;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: transparent;
+            border: 1px solid #FFD700;
+            color: #FFD700;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #FFD700;
+            color: black;
+        }
+
+        .social-icons {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .social-icons a:hover {
+            color: #FFD700;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: #FFD700; }
+        }
+
+        .subtitle {
+            width: 0;
+            animation: typing 20s steps(40, end), blink .75s step-end infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">My Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="certificate.html">Certificate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="main">
+        <h1 class="title">Hi, I'm Lester L. Matias</h1>
+        <p class="subtitle" id="typing-text"></p>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>
+
+    <script>
+        // Typing text effect
+        const typedText = ["A Frontend Developer", "A Backend Developer", "A Problem Solver"];
+        let currentIndex = 0;
+        let charIndex = 0;
+        let typingSpeed = 150; // Speed of typing in milliseconds
+
+        function typeText() {
+            const typingElement = document.getElementById('typing-text');
+            typingElement.textContent = typedText[currentIndex].substring(0, charIndex);
+            charIndex++;
+
+            if (charIndex <= typedText[currentIndex].length) {
+                setTimeout(typeText, typingSpeed);
+            } else {
+                // Wait for a bit, then erase text and move to the next word
+                setTimeout(eraseText, 1000);
+            }
+        }
+
+        function eraseText() {
+            const typingElement = document.getElementById('typing-text');
+            typingElement.textContent = typedText[currentIndex].substring(0, charIndex - 1);
+            charIndex--;
+
+            if (charIndex > 0) {
+                setTimeout(eraseText, typingSpeed);
+            } else {
+                // Move to the next word in the array
+                currentIndex = (currentIndex + 1) % typedText.length;
+                setTimeout(typeText, typingSpeed);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(typeText, 1000); // Start typing after 1 second
+        });
+    </script>
+
+</body>
+</html>
